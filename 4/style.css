@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #CEF9FF;
+}
+
+.block {
+    width: 100px;
+    position: relative;
+    height: 100px;
+    background-color: red;
+    animation-name: colorChange;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+}
+
+@keyframes colorChange {
+    0%{
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+    25%{
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+    50%{
+        background-color: blue;
+        left: 200px;
+        top:200px
+    }
+    75%{
+        background-color: green;
+        left :0px;
+        top: 200px;
+    }
+    100%{
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+
+.animation_block{
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: myMove 5s;
+    animation-fill-mode: forwards;
+}
+#div1{
+    animation-timing-function: linear;
+}
+#div2{
+    animation-timing-function: ease;
+}
+#div3{
+    animation-timing-function: ease-in;
+}
+#div4{
+    animation-timing-function: ease-out;
+}
+#div5{
+    animation-timing-function: cubic-bezier(5.0, 0.1, 1.0, 0.1);
+}
+@keyframes myMove {
+    from {left: 0px;}
+    to {left: 200px;}
+}
+
+
+/* .wheel{
+    width: auto;
+    background-color: white;
+    position: relative;
+    border: 50px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: Wheel 5s infinite linear;
+}
+.eye{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border-radius: 50%;
+}
+.line{
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    position: absolute;
+}
+
+.line:nth-child(2){
+    transform: rotate(90deg);
+}
+.line:nth-child(3){
+    transform: rotate(45deg);
+}
+.line:nth-child(4){
+    transform: rotate(135deg);
+}
+@keyframes Wheel {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+} */
+
+.bus_body{
+    position: relative;
+}
+.wheel1{
+    position: absolute;
+    bottom: 8px;
+    left: 45px;
+    animation: Wheel 5s infinite linear;
+}
+.wheel2{
+    position: absolute;
+    bottom: 8px;
+    left: 185px;
+    animation: Wheel 5s infinite linear;
+}
+@keyframes Wheel {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+} 
+
+.bus_body{
+    position: relative;
+    animation: bus 5s infinite linear;
+}
+@keyframes bus {
+    0%{
+        left: -50vh;
+    }
+    100%{
+        left: 150vh;
+    }
+}
+
+.sky{
+    width: 100%;
+    height: 500px;
+    background-color: skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: sky 5s infinite linear;
+}
+
+.cloud:nth-child(1){
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    animation: cloud 10s infinite linear;
+    z-index: 2;
+}
+.cloud:nth-child(2){
+    position: absolute;
+    left: 300px;
+    top: 50px;
+    animation: cloud 15s infinite linear;
+    z-index: 2;
+}
+.cloud:nth-child(3){
+    position: absolute;
+    left: 250px;
+    top: 150px;
+    animation: cloud 20s infinite linear;
+    z-index: 2;
+}
+.cloud:nth-child(4){
+    position: absolute;
+    left: -150px;
+    animation: cloud 30s infinite linear;
+    z-index: 2;
+}
+.sun{
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+    border-radius: 50%;
+    position: absolute;
+    animation: sun 5s infinite linear;
+}
+
+@keyframes cloud {
+    0%{
+     
+    }
+    100%{
+        left: 150vw;
+    }
+}
+
+@keyframes sun {
+    0%{
+        margin-top: 5%;
+    }
+    100%{
+       margin-bottom: 5%;
+    }
+}
