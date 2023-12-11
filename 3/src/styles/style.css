@@ -3,11 +3,33 @@
     padding: 0;
 
 }
+@font-face {
+    font-family: "TT Firs Neue";
+    src: url("./../font/TT\ Firs\ Neue\ Trial\ Regular.ttf");
+}
+@font-face {
+    font-family: "TT Firs Neue Bold";
+    src: url("./../font/TT\ Firs\ Neue\ Trial\ Bold.ttf");
+}
+@font-face {
+    font-family: "TT Firs Neue Medium";
+    src: url("./../font/TT\ Firs\ Neue\ Trial\ Medium.ttf");
+}
+@font-face {
+    font-family: "TT Firs Neue Light";
+    src: url("./../font/TT\ Firs\ Neue\ Trial\ Light.ttf");
+}
+@font-face {
+    font-family: "TT Firs Neue Extra Light";
+    src: url("./../font/TT\ Firs\ Neue\ Trial\ Extra\ Light.ttf");
+}
+
 body{
     background-image: url("./../img/bg_lines.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 50%;
+    cursor: url('./../img/mouse.svg'), url('./../img/mouse.svg'), url('./../img/mouse.svg'), auto;
 }
 .container{
     width: 1280px;
@@ -22,6 +44,9 @@ body{
 }
 .justify-center{
     justify-content: center;
+}
+.justify-end{
+    justify-content: end;
 }
 .align-center{
     align-items: center;
@@ -38,11 +63,23 @@ body{
 .gap-4{
     gap: 38px;
 }
+.gap-8{
+    gap: 80px;
+}
 .gap-1{
     gap:15px
 }
 .mt-58 {
     margin-top: 58px;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+.mb-60{
+    margin-bottom: 60px;
+}
+.mt-128{
+    margin-top: 128px;
 }
 .pb-12 {
     padding-bottom: 12px;
@@ -133,6 +170,99 @@ img{
   justify-content: center;
   align-items: center;
 }
+.col-12 {
+    width: 100%;
+}
+.col-11 {
+    width: 91.666667%;
+}
+.col-10 {
+    width: 83.333333%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-8 {
+    width: 66.666667%;
+}
+.col-7 {
+    width: 58.333333%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-5 {
+    width: 41.666667%;
+}
+.col-4 {
+    width: 33.333333%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-2 {
+    width: 16.666667%;
+}
+.col-1 {
+    width: 8.333333%;
+}
+.text-64 {
+    font-size: 64px;
+}
+.text-48 {
+    font-size: 48px;
+}
+.text-36 {
+    font-size: 36px;
+}
+.text-24{
+    font-size: 24px;
+}
+.text-18{
+    font-size: 18px;
+}
+.color-red{
+    color: #EF4242;
+}
+.h-80{
+    height: 80px;
+    background-color: #000;
+    width: 1px;
+}
+.text-light {
+    font-weight: 200;   
+    font-family: TT Firs Neue Light;
+}
+.text-extra-light {
+    font-weight: 300;   
+    font-family: TT Firs Neue Extra Light;
+}
+.text-regular {
+    font-weight: 400;  
+    font-family: TT Firs Neue; 
+}
+.text-medium {
+    font-weight: 500;   
+    font-family: TT Firs Neue Medium;
+}
+.text-bold {
+    font-weight: 700;   
+    font-family: TT Firs Neue Bold;
+}
+.services_list:hover::before{
+    color: black;
+    content: "";
+}
+.services_list:hover{
+    color: #EF4242;
+}
+.services_list:hover::after{
+    color: #EF4242;
+    content: url("./../img/arrowRed.svg");
+    width: 68px;
+    
+}
+
 
 .fragment::after {
   animation: noise 9s steps(10) infinite;
@@ -193,3 +323,28 @@ img{
 }
 
 
+.banner_img_1{
+    background-image: url(../img/banner1.png);
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.services_text{
+    font-size: 19vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.131);
+    text-align:justify;
+    
+}
+
+.gradient_text{
+    background: url("./../img/gradient.webp");
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: cover;
+}
