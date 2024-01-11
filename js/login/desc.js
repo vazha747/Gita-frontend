@@ -68,12 +68,32 @@ movieEl.innerHTML = `
 `
 main.appendChild(movieEl)
 
-seats.forEach((seat) => {
+seats.forEach((seat)  => {
   const seatEl = document.createElement("div");
   seatEl.classList.add("seat_places");
   seatEl.innerHTML = `
-        <h1>${seat.seat}</h1>
-        <h2>${seat.price}</h2>
+        <button onclick="myFunction()"><h1>${seat.seat}</h1>
+                <h2>${seat.price}</h2>
+        </button>        
     `;
   places.appendChild(seatEl);
+
 });
+
+
+
+
+// ჩემი ჩამატებული კოდები
+question = parseInt(question);
+function myFunction() {
+   let question = prompt('how many seats do yo want');
+if (question >= 1 && question <= 5 ){
+  let result = question * 25;
+  alert("your orde will be " + result + "GEL");
+  window.location.href = "payment.html"
+} else {
+  alert ('sorry we do not have more than 5 seats at the moment')
+}
+ 
+};
+
