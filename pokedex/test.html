@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Right-Click Popup</title>
+  <style>
+    /* Style for the popup */
+    #popup {
+      display: none;
+      position: fixed;
+      width: 200px;
+      height: 100px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- The popup content -->
+  <div id="popup">
+    <p>Information</p>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Reference to the popup element
+      var popup = document.getElementById('popup');
+
+      // Event listener for right-click
+      document.addEventListener('contextmenu', function(event) {
+        // Prevent the default right-click behavior
+        event.preventDefault();
+
+        // Set the position of the popup
+        popup.style.left = event.pageX + 'px';
+        popup.style.top = event.pageY + 'px';
+
+        // Show the popup
+        popup.style.display = 'block';
+      });
+
+      // Close the popup when clicking outside of it
+      document.addEventListener('click', function(event) {
+        if (event.target !== popup) {
+          popup.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
