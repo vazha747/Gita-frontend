@@ -1,3 +1,6 @@
+h1{
+  text-align: center;
+}
 .pokemon{
     width: 150px;
     display: flex;
@@ -19,23 +22,14 @@ img{
 .img_container{
     width: 50px;
 }
-
-  
-  .popup-content{
-    align-items:center ;
-
-  }
-  #popup {
-    display: none;
-    position: fixed;
-    width: 100px;
-    height: 200px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+#chosen-pokemon{  
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+.button{
+  text-align: center;
+  margin-top: 10px;
+}
