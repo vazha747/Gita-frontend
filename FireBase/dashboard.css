@@ -1,0 +1,19 @@
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(c3e792580a8cb5372d5ac027dcfa8d10.jpg);
+}
+.h1{
+    background-color: gray;
+}
+.border{
+    background-color: aliceblue ;
+    width: 300px;
+    height: 100px;
+    border: solid;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+    gap: 20px;
+}
